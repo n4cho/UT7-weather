@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:0;
+    padding:0;
+}
+main {
+    padding:48px;
+}
+footer {
+    
+    bottom: 0;
+    background: rgba(100, 100, 100, .8);
+    width:100%;
+    padding:24px;
+    color: white;
+}
+#loading {
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left:0;
+    width:100vw;
+    height: 100vh;
+    background: rgba(100 100 100 / .8);
+    display: grid;
+    place-content: center;
+    font-size:1.5em;
+    color: white;
+}
+#loading.hide {
+    display: none;
+    opacity: 0;
+}
+#dias {
+    display: flex;
+    column-gap: 48px;
+    margin: 64px;
+    padding-left:5%;
+    color: white;
+}
+#dias .dia {
+    width: 300px;
+    border-radius:8px;
+    padding:24px 16px;
+    background: lightslategray;
+    transition: height .6s ease;
+}
+
+#dias .dia.hoy {
+    background: darkslateblue;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 8px 2px rgba(100 100 100 / .8);
+    height: 540px;
+}
+
+#dias .dia .fecha {
+    color: rgba(255 255 255 / .6);
+    font-size:1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+}
+#dias .dia .icono {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    text-align: center;
+    padding:32px 0;
+    font-size:.9em;
+    font-weight: 100;
+
+}
+#dias .dia .icono img {
+    max-height:140px;
+    margin: 0 auto;
+}
+#dias .dia .temperatura {
+    font-size:3em;
+    display: flex;
+    column-gap:8px;
+    justify-content: center;
+    align-items:center;
+}
+#dias .dia .temperatura > div span {
+    font-size:.6em;
+    margin-right:8px;
+    font-weight: 100;
+}
+#dias .dia .temperatura > div:nth-child(2) {
+    font-size:.8em;
+    color: rgba(255 255 255 / .6);
+}
+
+#dias .dia .temperatura .minima {
+    font-size:.8em;
+}
+
+#dias .dia .probabilidadPrecipitacion {
+    display: flex;
+    column-gap:16px;
+    font-size:.8em;
+    justify-content: center;
+    margin:8px 0;
+}
+#dias .dia .intervalo {
+    padding:8px;
+    background: rgba(255 255 255 / .6);
+    border-radius: 8px;
+    display:grid;
+    place-content:center;
+    text-align: center;
+    color: #333;
+}
+#dias .dia .intervalo > div:first-of-type {
+    font-size:.8em;
+    margin-bottom:4px;
+}
+#dias .dia .intervalo > div:last-of-type {
+    font-weight: 600;
+}
+
+#dias .dia h4 {
+    font-weight:100;
+    margin:24px 0 0 0;
+}
+
+#dias .dia:not(.hoy) .datosAdicionales {
+display: none;
+} 
+
+#dias .dia .datosAdicionales {
+    padding:24px 0;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+#dias .dia .datosAdicionales button {
+    background: none;
+    border:1px solid white;
+    padding:8px 16px;
+    border-radius:2px;
+    color: white;
+    transition: all .3s ease;
+}
+
+#dias .dia .datosAdicionales .datos {
+    font-size:.8em;
+    font-weight: 200;
+    transition: all .3s ease;
+}
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+
+#dias .dia .datosAdicionales .datos > div {
+    display: grid;
+    grid-template-columns: 24px auto 128px;
+    grid-template-rows: repeat(4,6px);
+    width:240px;
+
+
+    
+
+}
