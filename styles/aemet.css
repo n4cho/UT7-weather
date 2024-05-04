@@ -7,15 +7,15 @@ body {
     margin:0;
     padding:0;
 }
-main {
-    padding:48px;
-}
+
 footer {
-    
     bottom: 0;
-    background: rgba(100, 100, 100, .8);
+    background: #333;
     width:100%;
     padding:24px;
+    color: white;
+}
+footer a {
     color: white;
 }
 #loading {
@@ -35,12 +35,17 @@ footer {
     display: none;
     opacity: 0;
 }
+h1 {
+    font-weight: 100;
+    text-align: center;
+    font-size: 3em;
+}
 #dias {
     display: flex;
-    column-gap: 48px;
-    margin: 64px;
-    padding-left:5%;
+    column-gap: 36px;
+    overflow-x: scroll;
     color: white;
+    padding: 48px;
 }
 #dias .dia {
     width: 300px;
@@ -75,7 +80,7 @@ footer {
 
 }
 #dias .dia .icono img {
-    max-height:140px;
+    max-height:130px;
     margin: 0 auto;
 }
 #dias .dia .temperatura {
@@ -166,5 +171,12 @@ display: none;
 
 
     
+
+}
+
+#avisoLegal {
+    padding:36px;
+    text-align: center;
+    font-size:.9em;
 
 }
