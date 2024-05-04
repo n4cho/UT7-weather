@@ -162,16 +162,14 @@ const mostrarProbabilidadLluviaBloques = (datos) => {
  * @returns {String}
  */
 const cargarIcono = (texto) => {
-  switch (texto.toLowerCase()) {
-    case "cubierto con lluvia":
-    case "muy nuboso con lluvia":
+  switch (true) {
+    case /lluvia/i.test(texto):
       return "lluvia.png";
-    case "intervalos nubosos con lluvia escasa":
-    case "intervalos nubosos con lluvia":
-    case "intervalos nubosos":
+    case /intervalos nubosos/i.test(texto):
       return "nubesyclaros.png";
-    case "nuboso":
+    case /nuboso/i.test(texto):
       return "nuboso.png";
+    case /sol/i.test(texto):
     default:
       return "soleado.png";
   }
