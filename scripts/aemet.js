@@ -62,8 +62,8 @@ const leerDatos = async (datos) => {
 
   //Recorremos los días contenidos en la propiedad prediccion
   for (let dia of dias) {
-    const diferencia =
-      new Date(dia.fecha).getDate() - new Date(hoy()).getDate();
+    const diferencia = new Date(dia.fecha).getDate() - new Date().getDate();
+
     if (diferencia >= 0 && diferencia < 4) {
       const capaDia = document.createElement("div");
       capaDia.innerHTML = `
